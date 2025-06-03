@@ -3,20 +3,20 @@
 
 <h2 align="center">nwr</h2>
 
-## How to Build
+## Build on macOS / Linux
 
 ```shell
+curl https://mise.run | sh
+mise use yarn@4.9.1 # or latest version
+ln -s ~/.local/share/mise/installs/yarn/4.9.1/bin/yarn ~/.local/bin/yarn # on Linux
 yarn # install deps
 yarn start # launch the app
-yarn dir # build executable only
-yarn nsis # windows nsis installer
-yarn 7zip # windows 7zip protable version
 yarn mac # macos
 yarn linux # linux
 yarn appimage # linux AppImage
 ```
 
-#### Main Program
+## Licenses
 
 For the full text of licenses, go and see NOTICE.md, which
 is also included in every copy of nwr.
