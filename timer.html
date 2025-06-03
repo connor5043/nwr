@@ -731,9 +731,9 @@
                 wasCounting = !wasCounting;
                 if (isClockWorking) {
                     window.clearInterval(int);
-                    pauseInt = setTimeout(function () {
-                        ipc.send("can-redo-alert");
-                    }, 1000 * 60 * 7);
+                    // pauseInt = setTimeout(function () {
+                    //     ipc.send("can-redo-alert");
+                    // }, 1000 * 60 * 7);
                     $("#stopper").html("<i class='iconfont icon-play' aria-hidden='true'></i>");
                     isClockWorking = 0;//to stop
                     ipc.send("tray-image-change", "stop");
