@@ -3,6 +3,9 @@
 
 <h2 align="center">nwr</h2>
 
+## Differences from wnr
+- [x] No reminder to resume timing
+
 ## Build on macOS / Linux
 
 ```shell
