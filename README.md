@@ -7,19 +7,12 @@
 
 ```shell
 yarn # install deps
-
 yarn start # launch the app
-
 yarn dir # build executable only
-
 yarn nsis # windows nsis installer
-
 yarn 7zip # windows 7zip protable version
-
 yarn mac # macos
-
 yarn linux # linux
-
 yarn appimage # linux AppImage
 ```
 
