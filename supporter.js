@@ -10,8 +10,8 @@ let isDarkMode = false;
 if (process.env.NODE_ENV === "portable") {
     try {
         store = new Store({
-            cwd: require('@electron/remote').app.getPath('exe').replace("wnr.exe", ""),
-            name: 'wnr-config'
+            cwd: require('@electron/remote').app.getPath('exe').replace("nwr.exe", ""),
+            name: 'nwr-config'
         });//accept portable
     } catch (e) {
         console.log(e);

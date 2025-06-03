@@ -1,20 +1,20 @@
 <p align="center"><img src="https://i.loli.net/2020/01/27/bOvLlYmT7dQFRjr.png"
         width="64px" /></p>
 
-<h2 align="center">wnr</h2>
+<h2 align="center">nwr</h2>
 
 <p align="center">
     <b>A timer app with strong expansibility for computers</b> | <a href="https://getwnr.com/">Website</a> | <a href="https://getwnr.com/zh/">网站中文页面</a>
 </p>
 
 <p align="center">
-    Download <i>(Windows & macOS)</i>: <a href="https://github.com/RoderickQiu/wnr/releases">GitHub Release</a> | <a
-        href="https://www.softpedia.com/get/Desktop-Enhancements/Clocks-Time-Management/wnr.shtml">Softpedia
+    Download <i>(Windows & macOS)</i>: <a href="https://github.com/RoderickQiu/nwr/releases">GitHub Release</a> | <a
+        href="https://www.softpedia.com/get/Desktop-Enhancements/Clocks-Time-Management/nwr.shtml">Softpedia
         (Windows)</a> | <a href="https://pan.baidu.com/s/1PDpnEkf-zKQKQIhUTO0ubQ">百度网盘</a>（swh3） | <a href="https://scris.lanzoui.com/b01n0tb4j">蓝奏云高速下载</a>
 </p>
 
 <p align="center">
-    <a href="https://github.com/RoderickQiu/wnr/blob/master/README.md">English README</a> | <a href="https://github.com/RoderickQiu/wnr/blob/master/README.zh-CN.md">简体中文简介</a> | <a href="https://github.com/RoderickQiu/wnr/blob/master/README.zh-TW.md">正體中文簡介</a> | <a href="https://github.com/RoderickQiu/wnr/blob/master/DEVELOPMENT_GUIDE.md">Development Guide</a> | <a href="mailto:scrisqiu@hotmail.com">Contact Me</a>
+    <a href="https://github.com/RoderickQiu/nwr/blob/master/README.md">English README</a> | <a href="https://github.com/RoderickQiu/nwr/blob/master/README.zh-CN.md">简体中文简介</a> | <a href="https://github.com/RoderickQiu/nwr/blob/master/README.zh-TW.md">正體中文簡介</a> | <a href="https://github.com/RoderickQiu/nwr/blob/master/DEVELOPMENT_GUIDE.md">Development Guide</a> | <a href="mailto:scrisqiu@hotmail.com">Contact Me</a>
 </p>
 
 ---
@@ -24,12 +24,12 @@
 I appreciate it if you can help contribute.
 
 - If you have any feature requests / bugs to report, feel free
-  to [have a issue](https://github.com/RoderickQiu/wnr/issues/new).
+  to [have a issue](https://github.com/RoderickQiu/nwr/issues/new).
 
-- If you have done something brilliant, then [go for a pull request](https://github.com/RoderickQiu/wnr/pulls).
+- If you have done something brilliant, then [go for a pull request](https://github.com/RoderickQiu/nwr/pulls).
 
 - If you want to add a new language to
-  wnr, [see this guide first](https://github.com/RoderickQiu/wnr/blob/master/locales/README.md).
+  nwr, [see this guide first](https://github.com/RoderickQiu/nwr/blob/master/locales/README.md).
 
 ## How to Build
 
@@ -54,11 +54,11 @@ yarn appimage # linux AppImage
 ## Star History
 
 <p align="center">
-    <a href="https://star-history.com/#RoderickQiu/wnr&Date">
+    <a href="https://star-history.com/#RoderickQiu/nwr&Date">
      <picture>
-       <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=RoderickQiu/wnr&type=Date&theme=dark" />
-       <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=RoderickQiu/wnr&type=Date" />
-       <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=RoderickQiu/wnr&type=Date" />
+       <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=RoderickQiu/nwr&type=Date&theme=dark" />
+       <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=RoderickQiu/nwr&type=Date" />
+       <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=RoderickQiu/nwr&type=Date" />
      </picture>
     </a>
 </p>
@@ -67,14 +67,14 @@ yarn appimage # linux AppImage
 
 Copyright (c) 2019-2025 **[Roderick Qiu](https://r-q.name)** and other contributors. All rights reserved.
 
-Licensed under the **[MPL 2.0 License](https://github.com/RoderickQiu/wnr/blob/master/LICENSE)**.
+Licensed under the **[MPL 2.0 License](https://github.com/RoderickQiu/nwr/blob/master/LICENSE)**.
 
 ### Packages Using
 
 #### Main Program
 
-For the full text of licenses, go and see [this file](https://github.com/RoderickQiu/wnr/blob/master/NOTICE.md), which
-is also included in every copy of wnr.
+For the full text of licenses, go and see [this file](https://github.com/RoderickQiu/nwr/blob/master/NOTICE.md), which
+is also included in every copy of nwr.
 
 - node-shi, [**my own project**](https://www.npmjs.com/package/node-shi) following MIT License.
 - cmd-or-ctrl, [**another project of mine**](https://www.npmjs.com/package/cmd-or-ctrl) following MIT License.

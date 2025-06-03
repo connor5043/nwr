@@ -21,7 +21,7 @@ jobs :
         with :
           name: windows
           path : |
-            packaged/wnr*
+            packaged/nwr*
 
   build-macos :
     runs-on : macos-latest
@@ -38,7 +38,7 @@ jobs :
         with :
           name: macos
           path : |
-            packaged/wnr*
+            packaged/nwr*
 
   build-linux :
     runs-on : ubuntu-latest
@@ -54,4 +54,4 @@ jobs :
       - uses : actions/upload-artifact@v4
         with :
           name: linux
-          path : packaged/wnr*
+          path : packaged/nwr*

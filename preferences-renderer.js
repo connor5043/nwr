@@ -434,7 +434,7 @@ function domString(type) {
                 <br/>
                 <p class="settings-msg">
                     ${ i18n.__('language-contribute-tip-part-1') }
-                        <a href=\"javascript:require('electron').shell.openExternal('https://github.com/RoderickQiu/wnr/blob/master/locales/README.md')\">${ i18n.__('language-contribute-tip-part-2') }</a>
+                        <a href=\"javascript:require('electron').shell.openExternal('https://github.com/RoderickQiu/nwr/blob/master/locales/README.md')\">${ i18n.__('language-contribute-tip-part-2') }</a>
                         ${ i18n.__('feedback-tip-part-4') }
                 </p>
             </div>
@@ -948,21 +948,21 @@ let encoding = require("crypto-js/enc-utf8");
 let copyToClipboard = require("copy-to-clipboard");
 if (process.env.NODE_ENV === "portable") {
     statistics = new Store({
-        cwd: require('@electron/remote').app.getPath('exe').replace("wnr.exe", ""),
-        name: 'wnr-statistics'
+        cwd: require('@electron/remote').app.getPath('exe').replace("nwr.exe", ""),
+        name: 'nwr-statistics'
     });
 } else {
     statistics = new Store({ name: 'statistics' });
 }
 
 function settingsBackup(mode) {
-    let cipherText = aes.encrypt(JSON.stringify((mode === "statistics") ? statistics.store : store.store), (mode === "statistics") ? String("She's awesome.") : String("We all love wnr, so please do not use this passcode to do bad things."));
+    let cipherText = aes.encrypt(JSON.stringify((mode === "statistics") ? statistics.store : store.store), (mode === "statistics") ? String("She's awesome.") : String("We all love nwr, so please do not use this passcode to do bad things."));
     copyToClipboard(cipherText.toString());
     ipc.send("notify", i18n.__('copied'));
 }
 
 function settingsImport(token, mode) {
-    let bytes = aes.decrypt(token, (mode === "statistics") ? String("She's awesome.") : String("We all love wnr, so please do not use this passcode to do bad things."));
+    let bytes = aes.decrypt(token, (mode === "statistics") ? String("She's awesome.") : String("We all love nwr, so please do not use this passcode to do bad things."));
     let isAllRight = true, formerData = null;
     try {
         let decryptedData = JSON.parse(bytes.toString(encoding));

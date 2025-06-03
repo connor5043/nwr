@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>wnr</title>
+    <title>nwr</title>
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
@@ -39,7 +39,7 @@
     <div class="right-resize"></div>
     <div class="bottom-resize"></div>
 
-    <script src="supporter.js"></script><!-- support wnr running -->
+    <script src="supporter.js"></script><!-- support nwr running -->
 
     <div class="d-flex mx-auto justify-content-center align-items-center text-dark" id="main">
         <div id="statistics-back">
@@ -201,8 +201,8 @@
 
         if (process.env.NODE_ENV === "portable") {
             statistics = new Store({
-                cwd: require('@electron/remote').app.getPath('exe').replace("wnr.exe", ""),
-                name: 'wnr-statistics'
+                cwd: require('@electron/remote').app.getPath('exe').replace("nwr.exe", ""),
+                name: 'nwr-statistics'
             });
         } else {
             statistics = new Store({ name: 'statistics' });
@@ -211,7 +211,7 @@
         if (!store.has("start-from-monday")) {
             const { dialog } = require('@electron/remote');
             dialog.showMessageBox({
-                title: " wnr",
+                title: " nwr",
                 type: "warning",
                 message: i18n.__("start-from-which-day"),
                 detail: i18n.__("can-be-modified-in-settings-later"),

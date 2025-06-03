@@ -45,7 +45,7 @@ app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required')//to 
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';//prevent seeing this meaningless alert
 
 //use native notification, declare package.json/build/appId beforehand
-app.on('ready', () => app.setAppUserModelId('com.scrisstudio.wnr'));
+app.on('ready', () => app.setAppUserModelId('com.scrisstudio.nwr'));
 
 function createWindow() {
     //create the main window
@@ -106,7 +106,7 @@ function createWindow() {
             if (((store.get("islocked") || (fullScreenProtection && isTimerWin)) && (process.env.NODE_ENV !== "development"))) {
                 event.preventDefault();
                 if (win != null)
-                    notificationSolution("wnr", i18n.__('prevent-stop'), "non-important");
+                    notificationSolution("nwr", i18n.__('prevent-stop'), "non-important");
             } else if ((process.platform === "darwin")) {
                 event.preventDefault();
                 windowCloseChk()
@@ -167,9 +167,9 @@ function alarmSet() {
                 app.focus();
                 isAlarmDialogClosed = false;
             }
-            customDialog("on", i18n.__('alarm-for-not-using-wnr-dialog-box-title'), i18n.__('alarm-for-not-using-wnr-dialog-box-content'), "isAlarmDialogClosed = true;win.show();win.moveTop();alarmSet();");
+            customDialog("on", i18n.__('alarm-for-not-using-nwr-dialog-box-title'), i18n.__('alarm-for-not-using-nwr-dialog-box-content'), "isAlarmDialogClosed = true;win.show();win.moveTop();alarmSet();");
         }
-    }, 600000)//alarm you for using wnr
+    }, 600000)//alarm you for using nwr
 }
 
 function relaunchSolution() {
@@ -340,8 +340,8 @@ app.on('ready', () => {
     require("@electron/remote/main").enable(win.webContents);
 
     if (process.env.NODE_ENV === "portable") {
-        store = new Store({ cwd: app.getPath('exe').replace("wnr.exe", ""), name: 'wnr-config' });//accept portable
-        statistics = new Store({ cwd: app.getPath('exe').replace("wnr.exe", ""), name: 'wnr-statistics' });
+        store = new Store({ cwd: app.getPath('exe').replace("nwr.exe", ""), name: 'nwr-config' });//accept portable
+        statistics = new Store({ cwd: app.getPath('exe').replace("nwr.exe", ""), name: 'nwr-statistics' });
     } else {
         store = new Store();
         statistics = new Store({ name: 'statistics' });
@@ -408,7 +408,7 @@ app.on('ready', () => {
                 win.focus();
             }
         });
-    }//prevent wnr from running more than one instance
+    }//prevent nwr from running more than one instance
 
     if (win != null) {
         if (styleCache.has("win-size")) {
@@ -572,7 +572,7 @@ app.on('ready', () => {
         else if (process.platform === "darwin") tray = new Tray(path.join(__dirname, '/res/icons/trayIconMacTemplate.png'));
         else if (process.platform === "linux") tray = new Tray(path.join(__dirname, '/res/icons/wnrIcon.png'));
         try {
-            tray.setToolTip('wnr');
+            tray.setToolTip('nwr');
         } catch (e) {
             console.log(e);
         }
@@ -590,7 +590,7 @@ app.on('ready', () => {
         store.set("predefined-tasks-created", true);
 
         predefinedTasks = [{
-            name: i18n.__('predefined-task-wnr-recommended'),
+            name: i18n.__('predefined-task-nwr-recommended'),
             workTime: 30,
             restTime: 6,
             loops: 5,
@@ -703,7 +703,7 @@ app.on('ready', () => {
         if (store.get("use-times") > 8)
             setTimeout(function () {
                 customDialog("select_on", i18n.__('suggest-star'),
-                    i18n.__('suggest-star-msg'), "shell.openExternal(\"https://github.com/RoderickQiu/wnr\");");
+                    i18n.__('suggest-star-msg'), "shell.openExternal(\"https://github.com/RoderickQiu/nwr\");");
                 store.set("suggest-star", "suggested");
             }, 1000);
     }
@@ -768,7 +768,7 @@ function customDialog(mode, title, msg, executeAfter) {
     } else if (mode === "cancel") {
         if (customDialogWin != null) customDialogWin.hide();
     } else if (mode === "button3_update") {
-        shell.openExternal("https://github.com/RoderickQiu/wnr/releases/latest");
+        shell.openExternal("https://github.com/RoderickQiu/nwr/releases/latest");
 
         if (customDialogWin != null) customDialogWin.hide();
     }
@@ -997,7 +997,7 @@ function traySolution(isFullScreen) {
             if ((!store.get("islocked")) && win != null) win.closable = true;
             if (process.platform === "win32" && win != null) win.setSkipTaskbar(false);
             contextMenu = Menu.buildFromTemplate([{
-                label: 'wnr' + i18n.__('v') + require("./package.json").version,
+                label: 'nwr' + i18n.__('v') + require("./package.json").version,
                 click: function () {
                     if (!isTimerWin) {
                         if (process.platform === "darwin" && win != null) win.show();
@@ -1090,7 +1090,7 @@ function traySolution(isFullScreen) {
             }, {
                 label: i18n.__('github'),
                 click: function () {
-                    shell.openExternal('https://github.com/RoderickQiu/wnr/');
+                    shell.openExternal('https://github.com/RoderickQiu/nwr/');
                 }
             }, {
                 type: 'separator'
@@ -1129,13 +1129,13 @@ function traySolution(isFullScreen) {
                         }
                     });//tray
                 tray.setContextMenu(contextMenu);
-                tray.setToolTip("wnr");
+                tray.setToolTip("nwr");
             }
         } else {
             if (win != null && (!isLoose)) win.closable = false;
             if (process.platform === "win32" && win != null && (!isLoose)) win.setSkipTaskbar(true);
             contextMenu = Menu.buildFromTemplate([{
-                label: 'wnr' + i18n.__('v') + require("./package.json").version
+                label: 'nwr' + i18n.__('v') + require("./package.json").version
             }, {
                 type: 'separator'
             }, {
@@ -1150,7 +1150,7 @@ function traySolution(isFullScreen) {
                 if (process.platform !== "linux")
                     tray.on('click', function () {
                     })
-                tray.setToolTip("wnr");
+                tray.setToolTip("nwr");
             }
         }
     }
@@ -1171,7 +1171,7 @@ function macOSFullscreenSolution(isFullScreen) {
             let template;
             if (!isFullScreen)
                 template = [{
-                    label: 'wnr',
+                    label: 'nwr',
                     submenu: [{
                         label: i18n.__('about'),
                         enabled: !isTimerWin,
@@ -1270,13 +1270,13 @@ function macOSFullscreenSolution(isFullScreen) {
                         }, {
                             label: i18n.__('github'),
                             click: function () {
-                                shell.openExternal('https://github.com/RoderickQiu/wnr/');
+                                shell.openExternal('https://github.com/RoderickQiu/nwr/');
                             }
                         }]
                 }];
             else
                 template = [{
-                    label: 'wnr',
+                    label: 'nwr',
                     submenu: [{
                         label: i18n.__('about'),
                         enabled: false
@@ -1369,7 +1369,7 @@ ipcMain.on("open-notification-settings", function (event, msg) {
         case "win32":
             if (getWindowsReleaseVersion() >= 10) shell.openExternal('ms-settings:notifications');
             else
-                customDialog("on", "wnr", (getWindowsReleaseVersion() === 8) ?
+                customDialog("on", "nwr", (getWindowsReleaseVersion() === 8) ?
                     i18n.__("open-notification-settings-windows-8-tip") :
                     i18n.__("open-notification-settings-windows-7-tip"), "");
             break;
@@ -1377,7 +1377,7 @@ ipcMain.on("open-notification-settings", function (event, msg) {
             shell.openExternal("x-apple.systempreferences:com.apple.preference.notifications");
             break;
         case "linux":
-            customDialog("on", "wnr", i18n.__("open-notification-settings-linux-tip"), "");
+            customDialog("on", "nwr", i18n.__("open-notification-settings-linux-tip"), "");
             break;
     }
 })
@@ -1868,7 +1868,7 @@ ipcMain.on('update-feedback', function (event, message) {
     // another button usage: button3_update
     if (message === "update-available") {
         let updateMessage = "";
-        fetch('https://gitee.com/roderickqiu/wnr-backup/raw/master/update.json')
+        fetch('https://gitee.com/roderickqiu/nwr-backup/raw/master/update.json')
             .then(res => res.json())
             .then(json => {
                 for (let updateIterator = 0; updateIterator < json.content[store.get('i18n')].length; updateIterator++) {
@@ -1886,7 +1886,7 @@ ipcMain.on('update-feedback', function (event, message) {
 })
 
 ipcMain.on('alert', function (event, message) {
-    customDialog("on", "wnr", message, "");
+    customDialog("on", "nwr", message, "");
 })
 
 ipcMain.on('can-redo-alert', function () {
@@ -1904,7 +1904,7 @@ ipcMain.on('delete-all-data', function () {
 function windowCloseChk() {
     if ((process.env.NODE_ENV !== "development") && win != null) {
         win.show();
-        customDialog("select_on", "wnr", i18n.__('window-close-dialog-box-title'),
+        customDialog("select_on", "nwr", i18n.__('window-close-dialog-box-title'),
             "statisticsWriter();\n" +
             "multiScreenSolution(\"off\");\n" +
             "setTimeout(function () { app.exit(0); }, 500);");
@@ -2016,7 +2016,7 @@ function about() {
                 try {
                     let aboutWinTouchBar = new TouchBar({
                         items: [
-                            new TouchBarLabel({ label: "wnr " + i18n.__('v') + require("./package.json")["version"] })
+                            new TouchBarLabel({ label: "nwr " + i18n.__('v') + require("./package.json")["version"] })
                         ]
                     });
                     aboutWinTouchBar.escapeItem = new TouchBarButton({
@@ -2176,11 +2176,11 @@ ipcMain.on('locker-passcode', function (event, message) {
     if (message === "wrong-passcode") lockerMessage = i18n.__('locker-settings-input-tip-wrong-password');
     if (message === "not-same-password") lockerMessage = i18n.__('locker-settings-not-same-password');
     if (message === "empty") lockerMessage = i18n.__('locker-settings-empty-password');
-    if (settingsWin != null) customDialog("on", "wnr", i18n.__('locker'), "");
+    if (settingsWin != null) customDialog("on", "nwr", i18n.__('locker'), "");
 })
 
 ipcMain.on("relaunch-dialog", function (event, message) {
-    customDialog("on", "wnr", i18n.__("relaunch-tip"),
+    customDialog("on", "nwr", i18n.__("relaunch-tip"),
         "try { store.set('just-relaunched', true); }" +
         "catch (e) { console.log(e); }\n" +
         "relaunchSolution();");
@@ -2399,9 +2399,9 @@ ipcMain.on("progress-bar-set", function (event, message) {
             win.setOverlayIcon(nativeImage.createFromPath(path.join(__dirname, '\\res\\icons\\overlay\\'
                 + (message.remain <= 60 ? message.remain : 61) + '.png')), progress.toString());
             if (message.positive)
-                win.setTitle("wnr | " + i18n.__('min-already') + " " + message.remain + " " + i18n.__('min') + " | " + i18n.__('today-total') + getStyledTimeForTray(estimCurrent + todaySum));
+                win.setTitle("nwr | " + i18n.__('min-already') + " " + message.remain + " " + i18n.__('min') + " | " + i18n.__('today-total') + getStyledTimeForTray(estimCurrent + todaySum));
             else
-                win.setTitle("wnr | " + i18n.__('min-left') + " " + message.remain + " " + i18n.__('min') + " | " + i18n.__('today-total') + getStyledTimeForTray(estimCurrent + todaySum));
+                win.setTitle("nwr | " + i18n.__('min-left') + " " + message.remain + " " + i18n.__('min') + " | " + i18n.__('today-total') + getStyledTimeForTray(estimCurrent + todaySum));
         }
     }
 })
@@ -2429,7 +2429,7 @@ ipcMain.on("notify", function (event, message) {
     if (message != null) {
         if (message.title != null && message.msg != null)
             notificationSolution(message.title, message.msg, "normal");
-        else notificationSolution("wnr", message, "normal")
+        else notificationSolution("nwr", message, "normal")
     }
 })
 
@@ -2448,7 +2448,7 @@ ipcMain.on("timer-win", function (event, message) {
         if (resetAlarm)
             clearTimeout(resetAlarm);
         isAlarmTipOn = false;
-        powerSaveBlockerId = powerSaveBlocker.start('prevent-app-suspension');//prevent wnr to be suspended when timing
+        powerSaveBlockerId = powerSaveBlocker.start('prevent-app-suspension');//prevent nwr to be suspended when timing
         isTimerWin = true;
         traySolution();
         macOSFullscreenSolution();
@@ -2460,7 +2460,7 @@ ipcMain.on("timer-win", function (event, message) {
         }
         if (process.platform === "win32" && win != null) {
             win.setOverlayIcon(null, "");
-            win.setTitle("wnr");
+            win.setTitle("nwr");
         }
         if (externalTitleWin != null) externalTitleWin.close();
 

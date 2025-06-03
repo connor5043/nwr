@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>wnr</title>
+    <title>nwr</title>
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
@@ -282,7 +282,7 @@
     <div id="bottom-bar">&nbsp;</div>
 
     <div id="fullscreen-custom-dialog" class="justify-content-left align-content-left text-left d-none">
-        <p class="small text-grey font-weight-bolder" style="margin-left: 0" id="dialog-title">wnr</p>
+        <p class="small text-grey font-weight-bolder" style="margin-left: 0" id="dialog-title">nwr</p>
         <p id="dialog-msg" class="small" style="line-height: 1.5; width: 210px; line-break: anywhere">Message</p>
         <div id="dialog-buttons" style="width:210px" class="text-right">
             <a type="button" id="dialog-ok" class="btn btn-outline-primary btn-sm text-right"
@@ -739,8 +739,8 @@
                     ipc.send("tray-image-change", "stop");
                     if (store.get("alarmtip") !== false) pausingTimeout = setInterval(function () {
                         ipc.send("notify", {
-                            title: i18n.__('alarm-for-not-using-wnr-dialog-box-title'),
-                            msg: i18n.__('alarm-for-not-using-wnr-dialog-box-content')
+                            title: i18n.__('alarm-for-not-using-nwr-dialog-box-title'),
+                            msg: i18n.__('alarm-for-not-using-nwr-dialog-box-content')
                         });
                     }, 600000);
                 } else {

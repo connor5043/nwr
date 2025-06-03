@@ -1,7 +1,7 @@
 {
-	"name" : "wnr",
+	"name" : "nwr",
 	"version" : "1.30.3",
-	"description" : "Work and rest, with wnr now!",
+	"description" : "Work and rest, with nwr now!",
 	"main" : "main.js",
 	"scripts" : {
 		"dep-update" : "yarn",
@@ -17,17 +17,17 @@
 	},
 	"repository" : {
 		"type" : "git",
-		"url" : "https://github.com/RoderickQiu/wnr.git"
+		"url" : "https://github.com/RoderickQiu/nwr.git"
 	},
 	"author" : "RoderickQiu",
 	"license" : "MPL-2.0",
 	"homepage" : "https://getwnr.com",
-	"appId" : "com.scrisstudio.wnr",
+	"appId" : "com.scrisstudio.nwr",
 	"build" : {
-		"appId" : "com.scrisstudio.wnr"
+		"appId" : "com.scrisstudio.nwr"
 	},
 	"copyright" : "(c) Roderick Qiu",
-	"productName" : "wnr",
+	"productName" : "nwr",
 	"dependencies" : {
 		"@eastdesire/jscolor" : "2.5.2",
 		"@electron/remote" : "2.1.1",

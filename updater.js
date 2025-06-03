@@ -10,7 +10,7 @@ function updateChecker(method) {
         manuallyCheckText = document.getElementById("manually").innerHTML;
         document.getElementById("manually").innerHTML = "...";
     }
-    fetch('https://gitee.com/roderickqiu/wnr-backup/raw/master/package.json')
+    fetch('https://gitee.com/roderickqiu/nwr-backup/raw/master/package.json')
         .then(res => res.json())
         .then(json => {
             if (compareVersion(json.version, version) === 1) {

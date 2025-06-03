@@ -2,7 +2,7 @@
 
 # Languages
 
-Until now, wnr has get these languages:
+Until now, nwr has get these languages:
 
 - English
 
@@ -22,19 +22,19 @@ Until now, wnr has get these languages:
     - The `languageCodeList[]` array in `main.js`.
     - The `nsis.installerLanguages[]` array in `res/builder/nsis.js` and `nsis-ia32.js`.
 
-3. Now, start to translate wnr to your language! After finished, please do not forget to make a pull request. I appreciate it.
+3. Now, start to translate nwr to your language! After finished, please do not forget to make a pull request. I appreciate it.
 
 ## Tips
 
 - If you were willing to change the Chinese translations, after changing Simplified Chinese / Traditional Chinese, use [OpenCC](https://opencc.byvoid.com/) to sync the changes to the other.
 
-- If you had set to your language, but it turned out that wnr was rendered in English, go check your JSON file. When the JSON file is with syntax errors, English is the fallback language.
+- If you had set to your language, but it turned out that nwr was rendered in English, go check your JSON file. When the JSON file is with syntax errors, English is the fallback language.
 
     - For example, you shouldn't have a `"` inside a `"`, use a `\"` instead.
 
 # 多语言
 
-迄今为止，wnr 支持以下几种语言:
+迄今为止，nwr 支持以下几种语言:
 
 - English（英语）
 
@@ -54,19 +54,19 @@ Until now, wnr has get these languages:
     - `main.js` 里的数组 `languageCodeList[]`。
     - `res/builder/nsis.js` 和 `nsis-ia32.js` 里的数组 `nsis.installerLanguages[]`。
 
-3. 现在可以开始将 wnr 翻译成你的语言了！完成后，请别忘了提交拉取请求（Pull Request）。非常感谢你的贡献。
+3. 现在可以开始将 nwr 翻译成你的语言了！完成后，请别忘了提交拉取请求（Pull Request）。非常感谢你的贡献。
 
 ## 温馨提示
 
 - 如果你想要更改中文翻译，请在更改完毕后使用 [OpenCC](https://opencc.byvoid.com/) 来同步简体中文和繁体中文。
 
-- 如果你已经将 wnr 设置为你的语言，但 wnr 却显示为英语，请检查你的 JSON 文件。当 JSON 文件存在语法错误时，英语将是默认显示的语言。
+- 如果你已经将 nwr 设置为你的语言，但 nwr 却显示为英语，请检查你的 JSON 文件。当 JSON 文件存在语法错误时，英语将是默认显示的语言。
 
     - 例如，`"` 不应当放置在另一个 `"` 中，请使用 `\"` 来代替。
 
 # 多語言
 
-迄今爲止，wnr 支持以下幾種語言:
+迄今爲止，nwr 支持以下幾種語言:
 
 - English（英語）
 
@@ -86,12 +86,12 @@ Until now, wnr has get these languages:
     - `main.js` 裏的數組 `languageCodeList[]`。
     - `res/builder/nsis.js` 和 `nsis-ia32.js` 裏的數組 `nsis.installerLanguages[]`。
 
-3. 現在可以開始將 wnr 翻譯成你的語言了！完成後，請別忘了提交拉取請求（Pull Request）。非常感謝你的貢獻。
+3. 現在可以開始將 nwr 翻譯成你的語言了！完成後，請別忘了提交拉取請求（Pull Request）。非常感謝你的貢獻。
 
 ## 溫馨提示
 
 - 如果你想要更改中文翻譯，請在更改完畢後使用 [OpenCC](https://opencc.byvoid.com/) 來同步簡體中文和正體中文。
 
-- 如果你已經將 wnr 設置爲你的語言，但 wnr 卻顯示爲英語，請檢查你的 JSON 文件。當 JSON 文件存在語法錯誤時，英語將是默認顯示的語言。
+- 如果你已經將 nwr 設置爲你的語言，但 nwr 卻顯示爲英語，請檢查你的 JSON 文件。當 JSON 文件存在語法錯誤時，英語將是默認顯示的語言。
 
     - 例如，`"` 不應當放置在另一個 `"` 中，請使用 `\"` 來代替。

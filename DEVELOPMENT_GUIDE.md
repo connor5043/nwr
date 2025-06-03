@@ -16,11 +16,11 @@ Written for version 1.17.1.
 
 - Using Electron-store to persist user data.
 
-- Using Node-i18n to perform internationalization ([I18n Contributing Guide](https://github.com/RoderickQiu/wnr/blob/master/locales/README.md)).
+- Using Node-i18n to perform internationalization ([I18n Contributing Guide](https://github.com/RoderickQiu/nwr/blob/master/locales/README.md)).
 
 - Using Electron-build and NSIS to pack the executives.
 
-- For the full technology stack, [package.json](https://github.com/RoderickQiu/wnr/blob/master/package.json) worths reading.
+- For the full technology stack, [package.json](https://github.com/RoderickQiu/nwr/blob/master/package.json) worths reading.
 
 ## Development Procedure
 
@@ -92,7 +92,7 @@ Written for version 1.17.1.
 
 - `package.json`
 
-    - The file controls wnr's version, dependencies, etc.
+    - The file controls nwr's version, dependencies, etc.
 
 - `placeholder.html`
 
@@ -108,7 +108,7 @@ Written for version 1.17.1.
 
 - `settings.html`
 
-    - This file is the setting page wnr has.
+    - This file is the setting page nwr has.
 
 - `statistics.html`
 
@@ -174,7 +174,7 @@ The file can be divided into three parts:
 
     - For example, `touchBarSolution()` controls the touch bar and `macOSFullscreenSolution()` controls the behavior of the top bar when fullscreen focus mode is on.
 
-- `app.on('ready', () => {})` is the function that initializes wnr.
+- `app.on('ready', () => {})` is the function that initializes nwr.
 
 - `isDarkMode()` and `darkModeSettingsFinder()` configures dark mode settings.
 
